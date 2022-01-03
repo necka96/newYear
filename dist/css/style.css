@@ -319,11 +319,7 @@ section {
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
   }
-  .header .navbar.active {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-  }
-  .header .navbar.active ul li {
+  .header .navbar ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -334,6 +330,10 @@ section {
         -ms-flex-pack: center;
             justify-content: center;
     margin: 2rem;
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
   }
   .home .cloud-1 {
     top: 10%;

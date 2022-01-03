@@ -251,16 +251,16 @@ section {
       border-bottom: $border;
       background: #010102;
       clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 2rem;
+        }
+      }
       &.active {
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
-        ul {
-          li {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 2rem;
-          }
-        }
       }
     }
   }
