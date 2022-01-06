@@ -608,7 +608,11 @@ section {
 .gallery .gallery-container .tp-grid {
   list-style-type: none;
   position: relative;
-  display: block;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 2rem;
 }
 
 .gallery .gallery-container .tp-grid.no-js li {

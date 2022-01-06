@@ -467,8 +467,7 @@ section {
     .tp-grid {
       list-style-type: none;
       position: relative;
-      display: block;
-
+      @include grid(10rem);
       &.no-js li {
         position: relative;
         display: inline-block;
