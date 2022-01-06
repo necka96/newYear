@@ -467,7 +467,7 @@ section {
     .tp-grid {
       list-style-type: none;
       position: relative;
-      // @include grid(10rem);
+      @include grid(10rem);
       &.no-js li {
         position: relative;
         display: inline-block;
@@ -593,5 +593,10 @@ section {
   .gallery {
     padding: 0;
     text-align: center;
+    .gallery-container {
+      display: grid;
+      place-items: center;
+      overflow-x: hidden;
+    }
   }
 }

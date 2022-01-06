@@ -608,6 +608,11 @@ section {
 .gallery .gallery-container .tp-grid {
   list-style-type: none;
   position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 2rem;
 }
 
 .gallery .gallery-container .tp-grid.no-js li {
@@ -738,6 +743,12 @@ section {
   .gallery {
     padding: 0;
     text-align: center;
+  }
+  .gallery .gallery-container {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
   }
 }
 /*# sourceMappingURL=style.css.map */
