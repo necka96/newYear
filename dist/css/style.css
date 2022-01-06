@@ -122,7 +122,7 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 10000;
   background: #010102;
   padding: 1rem 9%;
   display: -webkit-box;
@@ -553,6 +553,10 @@ section {
   color: #fff;
   line-height: 3rem;
   text-transform: capitalize;
+}
+
+.gallery {
+  overflow-x: hidden;
 }
 
 .gallery h2 {
