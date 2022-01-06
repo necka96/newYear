@@ -59,3 +59,18 @@ window.addEventListener("scroll", ()=>{
            stapel.closePile();
           })
      })
+
+let loadMoreBtn = document.querySelector("#load-more")
+let currentItem = 3
+
+loadMoreBtn.addEventListener("click", (e)=>{
+ e.preventDefault()
+ let boxes = [...document.querySelectorAll(".blogs .blogs-container .box")]
+ for (let i = currentItem; i < currentItem + 3; i++){
+ boxes[i].style.display = "block"
+ }
+ currentItem += 3
+ if(currentItem >=boxes.length){
+  loadMoreBtn.style.display = "none"
+ }
+})
