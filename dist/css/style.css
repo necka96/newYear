@@ -617,7 +617,6 @@ section {
 }
 
 .gallery .gallery-container .tp-grid li {
-  overflow-x: hidden;
   position: absolute;
   cursor: pointer;
   border: 10px solid #fff;
@@ -638,7 +637,6 @@ section {
   border: none;
 }
 
-.gallery .gallery-container .tp-grid li .tp-info,
 .gallery .gallery-container .tp-grid li .tp-title {
   position: absolute;
   background: #fff;
@@ -655,9 +653,6 @@ section {
           box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), 5px 0 5px -3px rgba(0, 0, 0, 0.4), inset 0 0 5px rgba(0, 0, 0, 0.04);
   text-transform: capitalize;
   text-align: center;
-}
-
-.gallery .gallery-container .tp-grid li .tp-title {
   padding: 10px 35px 10px 10px;
   left: 0px;
 }
@@ -672,10 +667,6 @@ section {
   top: 0px;
   position: absolute;
   display: block;
-}
-
-.gallery .gallery-container .tp-grid li .touch .tp-info {
-  left: 0px;
 }
 
 @media only screen and (max-width: 991px) {
