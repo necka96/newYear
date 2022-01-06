@@ -555,10 +555,6 @@ section {
   text-transform: capitalize;
 }
 
-.gallery {
-  overflow-x: hidden;
-}
-
 .gallery h2 {
   font-size: 3rem;
   color: #fff;
@@ -612,12 +608,7 @@ section {
 .gallery .gallery-container .tp-grid {
   list-style-type: none;
   position: relative;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  gap: 2rem;
-  overflow-x: hidden;
+  display: block;
 }
 
 .gallery .gallery-container .tp-grid.no-js li {
@@ -626,13 +617,13 @@ section {
 }
 
 .gallery .gallery-container .tp-grid li {
+  overflow-x: hidden;
   position: absolute;
   cursor: pointer;
   border: 10px solid #fff;
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
   display: none;
-  overflow: hidden;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }

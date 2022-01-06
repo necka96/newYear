@@ -425,7 +425,6 @@ section {
   }
 }
 .gallery {
-  overflow-x: hidden;
   h2 {
     @include text(3rem, unset, uppercase, #fff);
     margin: 3rem 0;
@@ -468,19 +467,20 @@ section {
     .tp-grid {
       list-style-type: none;
       position: relative;
-      @include grid(10rem);
-      overflow-x: hidden;
+      display: block;
+
       &.no-js li {
         position: relative;
         display: inline-block;
       }
       li {
+        overflow-x: hidden;
         position: absolute;
         cursor: pointer;
         border: 10px solid #fff;
         box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
         display: none;
-        overflow: hidden;
+
         backface-visibility: hidden;
         a {
           display: block;
