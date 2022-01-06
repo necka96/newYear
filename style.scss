@@ -33,6 +33,7 @@ html {
 section {
   padding: 3rem 9%;
 }
+
 .btn {
   background: #111;
   padding: 1rem 2rem;
@@ -116,6 +117,7 @@ section {
   line-height: $text-hight;
   text-transform: $text-transform;
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -376,6 +378,7 @@ section {
     }
   }
 }
+
 .services {
   h2 {
     @include text(3rem, unset, uppercase, #fff);
@@ -417,6 +420,111 @@ section {
       }
       p {
         @include text(1.6rem, 3rem, capitalize, #fff);
+      }
+    }
+  }
+}
+.gallery {
+  h2 {
+    @include text(3rem, unset, uppercase, #fff);
+    margin: 3rem 0;
+    text-align: center;
+    span {
+      color: #da5c00;
+    }
+  }
+  .gallery-container {
+    position: relative;
+    width: 100%;
+
+    img {
+      max-width: 395px;
+      max-height: 277px;
+    }
+    .topbar {
+      position: relative;
+      padding: 20px 0;
+      margin: 0 0 40px;
+
+      .back {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -20px 0 0 -20px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 38px;
+        color: #fff;
+        background: #da5c00;
+        cursor: pointer;
+        display: none;
+        user-select: none;
+        font-size: 2rem;
+      }
+    }
+    .tp-grid {
+      list-style-type: none;
+      position: relative;
+      @include grid(10rem);
+      &.no-js li {
+        position: relative;
+        display: inline-block;
+      }
+      li {
+        position: absolute;
+        cursor: pointer;
+        border: 10px solid #fff;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+        display: none;
+        overflow: hidden;
+        backface-visibility: hidden;
+        a {
+          display: block;
+          outline: none;
+          img {
+            display: block;
+            border: none;
+          }
+        }
+        .tp-info,
+        .tp-title {
+          position: absolute;
+          background: #fff;
+          line-height: 20px;
+          color: #333;
+          top: 40%;
+          width: 75%;
+          font-size: 2rem;
+          padding: 10px;
+          font-weight: 700;
+          text-align: right;
+          left: -100%;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1),
+            5px 0 5px -3px rgba(0, 0, 0, 0.4), inset 0 0 5px rgba(0, 0, 0, 0.04);
+          text-transform: capitalize;
+          text-align: center;
+        }
+        .tp-title {
+          padding: 10px 35px 10px 10px;
+          left: 0px;
+          span:nth-child(2) {
+            color: #aaa;
+            padding: 0 5px;
+            background: #f7f7f7;
+            right: 0px;
+            height: 100%;
+            line-height: 40px;
+            top: 0px;
+            position: absolute;
+            display: block;
+          }
+        }
+
+        .touch .tp-info {
+          left: 0px;
+        }
       }
     }
   }
@@ -472,8 +580,24 @@ section {
     }
   }
 }
+@media screen and (max-width: 680px) {
+  .topbar h2,
+  .topbar h3 {
+    text-align: left;
+    padding: 0;
+    display: block;
+  }
+  .back {
+    left: auto;
+    right: 0px;
+    margin-left: 0px;
+  }
+}
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .gallery {
+    padding: 0;
   }
 }

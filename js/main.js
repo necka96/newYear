@@ -33,3 +33,29 @@ window.addEventListener("scroll", ()=>{
  document.querySelector(".home .cloud-1").style.right = `${-value}%`
  document.querySelector(".home .cloud-2").style.left = `${-value}%`
 })
+ $(function(){
+      var $grid = $('#tp-grid')
+          $name = $('#name')
+          $close = $('#close ')
+          $loader = $('').insertBefore($grid)
+          stapel = $grid.stapel({
+           randomAngle : true,
+           delay: 50,
+           gutter : 70,
+           pileAngles : 5,
+           onLoad : function(){
+            $loader.remove()
+           },
+           onBeforeOpen : function (pileName){
+            $name.html(pileName)
+           },
+           onAfterOpen : function (pileName){
+            $close.show()
+           }
+          })
+          $close.on("click", function(){
+           $close.hide();
+           $name.empty();
+           stapel.closePile();
+          })
+     })
