@@ -13,6 +13,7 @@ body {
   background: #010102;
   overflow-x: hidden;
 }
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -31,6 +32,78 @@ html {
 }
 section {
   padding: 3rem 9%;
+}
+.btn {
+  background: #111;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+  &:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  &:active {
+    color: #000;
+  }
+
+  &:active:after {
+    background: transparent;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+
+  &:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
 }
 @mixin grid($val) {
   display: grid;
@@ -213,10 +286,9 @@ section {
 .about {
   width: 100%;
   height: fit-content;
-  @include grid(350px);
+  @include grid(30rem);
   img {
-    width: 90%;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
   }
   .text {
@@ -231,6 +303,121 @@ section {
     }
     p {
       @include text(1.6rem, 3rem, capitalize, gray);
+      margin-bottom: 20px;
+    }
+  }
+}
+.product {
+  h2 {
+    @include text(3rem, unset, uppercase, #fff);
+    margin: 3rem 0;
+    text-align: center;
+    span {
+      color: #da5c00;
+    }
+  }
+  .product-container {
+    @include grid(30rem);
+    .box {
+      text-align: center;
+      &:hover .img {
+        img {
+          transform: scale(1.1);
+        }
+        .icons {
+          transform: translateY(0);
+        }
+      }
+      .img {
+        width: 100%;
+        height: 30rem;
+        position: relative;
+        overflow: hidden;
+        img {
+          height: 100%;
+        }
+        .icons {
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: rgba(0, 0, 0, 0.666);
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: translateY(-100%);
+          a {
+            height: 4.5rem;
+            width: 4.5rem;
+            @include text(2rem, 4.5rem, capitalize, black);
+            cursor: pointer;
+            background: #fff;
+            text-align: center;
+            margin-left: 0.5rem;
+
+            &:hover {
+              background: #da5c00;
+              color: #fff;
+            }
+          }
+        }
+      }
+      h3 {
+        @include text(2.4rem, unset, capitalize, white);
+      }
+      .price {
+        @include text(2rem, unset, capitalize, white);
+        span {
+          font-size: 1.8rem;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}
+.services {
+  h2 {
+    @include text(3rem, unset, uppercase, #fff);
+    margin: 3rem 0;
+    text-align: center;
+    span {
+      color: #da5c00;
+    }
+  }
+  .container-services {
+    @include grid(31rem);
+    .box {
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 3rem;
+      cursor: pointer;
+      &:nth-child(even) {
+        background: #111;
+        border-radius: 0.5rem;
+      }
+      &:hover i {
+        transform: translateY(-1rem);
+      }
+      i {
+        width: 60px;
+        height: 60px;
+        background: #da5c00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        border-radius: 50%;
+        color: #fff;
+      }
+      h3 {
+        @include text(2rem, unset, capitalize, #fff);
+        margin: 1.5rem;
+      }
+      p {
+        @include text(1.6rem, 3rem, capitalize, #fff);
+      }
     }
   }
 }

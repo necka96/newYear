@@ -39,6 +39,84 @@ section {
   padding: 3rem 9%;
 }
 
+.btn {
+  background: #111;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+.btn:before {
+  content: "";
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  -webkit-animation: glowing 20s linear infinite;
+          animation: glowing 20s linear infinite;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.btn:active {
+  color: #000;
+}
+
+.btn:active:after {
+  background: transparent;
+}
+
+.btn:hover:before {
+  opacity: 1;
+}
+
+.btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -263,14 +341,13 @@ section {
   height: fit-content;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2rem;
 }
 
 .about img {
-  width: 90%;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
 }
 
@@ -297,6 +374,183 @@ section {
 .about .text p {
   font-size: 1.6rem;
   color: gray;
+  line-height: 3rem;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.product h2 {
+  font-size: 3rem;
+  color: #fff;
+  line-height: unset;
+  text-transform: uppercase;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.product h2 span {
+  color: #da5c00;
+}
+
+.product .product-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+
+.product .product-container .box {
+  text-align: center;
+}
+
+.product .product-container .box:hover .img img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.product .product-container .box:hover .img .icons {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.product .product-container .box .img {
+  width: 100%;
+  height: 30rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.product .product-container .box .img img {
+  height: 100%;
+}
+
+.product .product-container .box .img .icons {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.666);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.product .product-container .box .img .icons a {
+  height: 4.5rem;
+  width: 4.5rem;
+  font-size: 2rem;
+  color: black;
+  line-height: 4.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  background: #fff;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+
+.product .product-container .box .img .icons a:hover {
+  background: #da5c00;
+  color: #fff;
+}
+
+.product .product-container .box h3 {
+  font-size: 2.4rem;
+  color: white;
+  line-height: unset;
+  text-transform: capitalize;
+}
+
+.product .product-container .box .price {
+  font-size: 2rem;
+  color: white;
+  line-height: unset;
+  text-transform: capitalize;
+}
+
+.product .product-container .box .price span {
+  font-size: 1.8rem;
+  text-decoration: line-through;
+}
+
+.services h2 {
+  font-size: 3rem;
+  color: #fff;
+  line-height: unset;
+  text-transform: uppercase;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.services h2 span {
+  color: #da5c00;
+}
+
+.services .container-services {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+  gap: 2rem;
+}
+
+.services .container-services .box {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 3rem;
+  cursor: pointer;
+}
+
+.services .container-services .box:nth-child(even) {
+  background: #111;
+  border-radius: 0.5rem;
+}
+
+.services .container-services .box:hover i {
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.services .container-services .box i {
+  width: 60px;
+  height: 60px;
+  background: #da5c00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3rem;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.services .container-services .box h3 {
+  font-size: 2rem;
+  color: #fff;
+  line-height: unset;
+  text-transform: capitalize;
+  margin: 1.5rem;
+}
+
+.services .container-services .box p {
+  font-size: 1.6rem;
+  color: #fff;
   line-height: 3rem;
   text-transform: capitalize;
 }
