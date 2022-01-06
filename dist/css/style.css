@@ -617,6 +617,7 @@ section {
   -ms-grid-columns: (minmax(10rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 2rem;
+  overflow-x: hidden;
 }
 
 .gallery .gallery-container .tp-grid.no-js li {
@@ -680,6 +681,10 @@ section {
   top: 0px;
   position: absolute;
   display: block;
+}
+
+.gallery .gallery-container .tp-grid li .touch .tp-info {
+  left: 0px;
 }
 
 @media only screen and (max-width: 991px) {

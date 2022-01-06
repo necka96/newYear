@@ -469,6 +469,7 @@ section {
       list-style-type: none;
       position: relative;
       @include grid(10rem);
+      overflow-x: hidden;
       &.no-js li {
         position: relative;
         display: inline-block;
@@ -521,6 +522,10 @@ section {
             position: absolute;
             display: block;
           }
+        }
+
+        .touch .tp-info {
+          left: 0px;
         }
       }
     }
