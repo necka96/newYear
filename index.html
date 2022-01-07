@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="./dist/css/style.css" />
   </head>
   <body>
+   
     <header class="header">
       <a href="./index.html" class="logo">New Year</a>
       <nav class="navbar">
@@ -41,6 +43,7 @@
         <label for="search-box" class="fas fa-search"></label>
       </form>
     </header>
+    
     <section id="home" class="home">
       <div class="content">
         <p>We wish you a</p>
@@ -54,8 +57,8 @@
     </section>
 
     <section id="about" class="about">
-      <img src="./img/about.png" alt="" />
-      <div class="text">
+      <img src="./img/about.png" alt="" data-aos="fade-right" data-aos-delay="250" />
+      <div class="text" data-aos="fade-left" data-aos-delay="450">
         <h5>why choose us?</h5>
         <h2>Celebrate your christmas with us</h2>
         <p>
@@ -70,7 +73,8 @@
     <section id="product" class="product">
       <h2>our <span>product</span></h2>
       <div class="product-container">
-        <div class="box">
+        <div class="box" data-aos="zoom-in"   
+    data-aos-delay="450">
           <div class="img">
             <img src="./img/toy1.png" alt="" />
             <div class="icons">
@@ -91,7 +95,10 @@
             <div class="price">$20.6 <span>$32.6</span></div>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in"  
+    data-aos-delay="650"
+  
+    >
           <div class="img">
             <img src="./img/product-1.png" alt="" />
             <div class="icons">
@@ -112,7 +119,8 @@
             <div class="price">$20.6 <span>$32.6</span></div>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in" 
+    data-aos-delay="900">
           <div class="img">
             <img src="./img/toy2.png" alt="" />
             <div class="icons">
@@ -133,7 +141,9 @@
             <div class="price">$20.6 <span>$32.6</span></div>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in" 
+    data-aos-delay="1250">
+    
           <div class="img">
             <img src="./img/product-3.png" alt="" />
             <div class="icons">
@@ -154,7 +164,9 @@
             <div class="price">$20.6 <span>$32.6</span></div>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in"
+    data-aos-delay="1500"
+     >
           <div class="img">
             <img src="./img/product-4.png" alt="" />
             <div class="icons">
@@ -175,7 +187,9 @@
             <div class="price">$20.6 <span>$32.6</span></div>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in" 
+    data-aos-delay="1750"
+     >
           <div class="img">
             <img src="./img/product-6.png" alt="" />
             <div class="icons">
@@ -201,7 +215,8 @@
     <section id="services" class="services">
       <h2>Our <span>services</span></h2>
       <div class="container-services">
-        <div class="box">
+        <div class="box" data-aos="fade-up"
+        data-aos-delay="150">
           <i class="fas fa-tree"></i>
           <h3>christmas tree</h3>
           <p>
@@ -209,7 +224,8 @@
             doloribus!
           </p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up"
+        data-aos-delay="300">
           <i class="fas fa-snowman"></i>
           <h3>christmas snowman</h3>
           <p>
@@ -217,7 +233,8 @@
             doloribus!
           </p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up"
+        data-aos-delay="450">
           <i class="fas fa-cookie"></i>
           <h3>christmas cookies</h3>
           <p>
@@ -225,7 +242,7 @@
             doloribus!
           </p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
           <i class="fas fa-candy-cane"></i>
           <h3>christmas candy</h3>
           <p>
@@ -233,7 +250,7 @@
             doloribus!
           </p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up" data-aos-delay="750">
           <i class="fas fa-gifts"></i>
           <h3>christmas gifts</h3>
           <p>
@@ -241,7 +258,7 @@
             doloribus!
           </p>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up" data-aos-delay="900">
           <i class="fas fa-sleigh"></i>
           <h3>christmas sleigh</h3>
           <p>
@@ -257,8 +274,8 @@
         <div class="topbar">
           <span class="back" id="close">&larr;</span>
         </div>
-        <ul class="tp-grid" id="tp-grid">
-          <li data-pile="christmas tree">
+        <ul class="tp-grid" id="tp-grid" data-aos="zoom-in" data-aos-delay="300" >
+          <li data-pile="christmas tree" >
             <a href="#">
               <img src="img/gallery-img-1.jpg" alt="" />
             </a>
@@ -348,7 +365,8 @@
     <section class="blogs" id="blogs">
       <h2>our <span>blog</span></h2>
       <div class="blogs-container">
-        <div class="box">
+        <div class="box " data-aos="fade-up" data-aos-delay="550"
+        data-aos-offset="700">
           <div class="blog-img">
             <img src="./img/blog-post1.jpg" alt="" />
           </div>
@@ -365,7 +383,8 @@
             </div>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up" data-aos-delay="800"
+         data-aos-offset="700">
           <div class="blog-img">
             <img src="./img/blog-post2.jpg" alt="" />
           </div>
@@ -382,7 +401,8 @@
             </div>
           </div>
         </div>
-        <div class="box">
+        <div class="box" data-aos="fade-up" data-aos-delay="1050"
+         data-aos-offset="700">
           <div class="blog-img">
             <img src="./img/blog-post3.jpg" alt="" />
           </div>
@@ -399,7 +419,7 @@
             </div>
           </div>
         </div>
-        <div class="box">
+        <div class="box" >
           <div class="blog-img">
             <img src="./img/blog-post4.jpg" alt="" />
           </div>
@@ -454,18 +474,73 @@
       <a href="#" id="load-more" class="btn">Load More</a>
     </section>
     <section class="contact" id="contact">
-      <h2>Countac Us</h2>
+      <h2 data-aos="fade-up" data-aos-delay="150"
+       data-aos-offset="700">Countac Us</h2>
       <form action="POST"  data-netlify="true">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" id="" placeholder="Your Email">
-        <input type="tel" name="tel" id="" placeholder="Your Phone" required>
-        <textarea placeholder="Your Message" name="message" id="" cols="30" rows="10"></textarea>
-        <button class="btn" type="submit">Send message</button>
+        <input type="text" name="name" placeholder="Your Name" required data-aos="fade-up" data-aos-delay="300"  data-aos-offset="700">
+        <input type="email" name="email" id="" placeholder="Your Email" data-aos="fade-up" data-aos-delay="450"  data-aos-offset="700">
+        <input type="tel" name="tel" id="" placeholder="Your Phone" required data-aos="fade-up" data-aos-delay="600"  data-aos-offset="700">
+        <textarea placeholder="Your Message" name="message" id="" cols="30" rows="10" data-aos="fade-up" data-aos-delay="750"  data-aos-offset="700"></textarea>
+        <button class="btn" type="submit" data-aos="fade-up" data-aos-delay="1000"  data-aos-offset="700">Send message</button>
       </form>
     </section>
+    <footer id="footer" class="footer">
+      <div class="footer-container">
+        <div class="box"data-aos="fade-up" data-aos-delay="1000"
+         data-aos-offset="700" >
+          <h3>quick links</h3>
+          <nav class="navbar">
+            <ul>
+              <li><a href="#top"><i class="fas fa-angle-right"></i>Home</a></li>
+              <li><a href="#about"><i class="fas fa-angle-right"></i>About</a></li>
+              <li><a href="#product"><i class="fas fa-angle-right"></i>Product</a></li>
+              <li><a href="#services"><i class="fas fa-angle-right"></i>Services</a></li>
+              <li><a href="#gallery"><i class="fas fa-angle-right"></i>Gallery</a></li>
+              <li><a href="#blogs"><i class="fas fa-angle-right"></i>Blogs</a></li>
+              <li><a href="#contact"><i class="fas fa-angle-right"></i>Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="1200"
+         data-aos-offset="700">
+          <h3>extra links</h3>
+          <a class="link" href="#"> <i class="fas fa-angle-right"></i> my order </a>
+          <a class="link" href="#"> <i class="fas fa-angle-right"></i> my wishlist </a>
+          <a class="link" href="#"> <i class="fas fa-angle-right"></i> my favorite </a>
+          <a class="link" href="#"> <i class="fas fa-angle-right"></i> terms or use </a>
+          <a class="link" href="#"> <i class="fas fa-angle-right"></i> privacy policy </a>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="1400"
+         data-aos-offset="700">
+          <h3>contact info</h3>
+          <a class="link" href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+          <a class="link" href="#"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+          <a class="link" href="@mailto:newyear22@hmail.com"> <i class="fas fa-envelope"></i> newyear22@hmail.com </a>
+          <a class="link" href="@mailto:christmas22@hmail.com"> <i class="fas fa-envelope"></i> christmas22@hmail.com </a>
+          <a class="link" href="#"> <i class="fas fa-map"></i> Vlasotince, srbija </a>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="1600"
+         data-aos-offset="700">
+          <h3>newsletter</h3>
+          <input type="email" placeholder="Your Mail">
+          <button class="btn" type="submit">subscribe</button>
+          <div class="socila-icon">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+      </div>
+      <p class="credit"> &copy; <span id="date"></span>, created by <span>Nemanja Djordjevic</span> | all rights reserved! </p>
+    </footer>
+    <div class="preloader">
+      <img src="./img/preolader.gif" alt="">
+    </div>
     <script src="./js/modernizr.custom.63321.js"></script>
     <script src="./js/jquery-3.6.0.js"></script>
     <script src="./js/jquery.stapel.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

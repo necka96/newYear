@@ -117,6 +117,46 @@ section {
   }
 }
 
+.preloader {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.preloader.disppear {
+  -webkit-animation: disppear 0.5s forwards;
+          animation: disppear 0.5s forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes disppear {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes disppear {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -606,7 +646,7 @@ section {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .gallery .gallery-container .tp-grid {
@@ -807,6 +847,120 @@ section {
 .contact form textarea {
   resize: none;
   height: 15rem;
+}
+
+.footer {
+  padding: 3rem 9%;
+  background: #111;
+  overflow-x: hidden;
+}
+
+.footer .footer-container {
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(20rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+
+.footer .footer-container .box h3 {
+  font-size: 2.4rem;
+  color: #fff;
+  line-height: unset;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.footer .footer-container .box .btn {
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.9;
+  color: #000;
+}
+
+.footer .footer-container .box .btn:after {
+  background: #fff;
+}
+
+.footer .footer-container .box a {
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: unset;
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer .footer-container .box a:hover {
+  color: #da5c00;
+}
+
+.footer .footer-container .box a:hover i {
+  padding-right: 10px;
+}
+
+.footer .footer-container .box a i {
+  padding-right: 5px;
+  color: #da5c00;
+}
+
+.footer .footer-container .box input {
+  width: 100%;
+  padding: 1.5rem 0;
+  background: none;
+  color: white;
+  font-size: 1.8rem;
+  border-bottom: 0.3rem solid rgba(225, 255, 255, 0.2);
+  margin-bottom: 1rem;
+}
+
+.footer .footer-container .box input:focus {
+  border-color: #da5c00;
+}
+
+.footer .footer-container .box .socila-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.footer .footer-container .box .socila-icon a {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+
+.footer .footer-container .box .socila-icon a:hover {
+  background: #da5c00;
+}
+
+.footer .credit {
+  color: #fff;
+  width: 100%;
+  border-top: 0.3rem solid rgba(225, 255, 255, 0.2);
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 2rem;
+}
+
+.footer .credit span:nth-child(2) {
+  color: #da5c00;
 }
 
 @media only screen and (max-width: 991px) {

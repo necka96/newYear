@@ -74,3 +74,10 @@ loadMoreBtn.addEventListener("click", (e)=>{
   loadMoreBtn.style.display = "none"
  }
 })
+$("#date").html(new Date().getFullYear())
+$(window).on("load", ()=>{
+$(".preloader").addClass("disppear")
+})
+AOS.init({
+       duration:800,
+})
